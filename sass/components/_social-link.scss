@@ -16,12 +16,10 @@
 }
 
 .social-links {
-  margin-right: 30px;
-  width: 270px;
-
   & .social-list {
     display: flex;
     margin-top: 20px;
+    justify-content: center;
   }
 
   & .item:not(:last-child) {
@@ -77,7 +75,6 @@
 }
 
 .socialfooter {
-  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,7 +99,6 @@
 }
 
 .socialfooter-icon {
-  fill: #ffffff;
   display: flex;
   justify-content: center;
   margin-bottom: 18px;

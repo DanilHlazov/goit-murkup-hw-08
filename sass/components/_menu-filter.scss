@@ -1,52 +1,76 @@
 .filters {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 40px;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.filter-set .item:not(:last-child) {
-  margin-right: 8px;
-}
-.filter-name {
-  margin-top: 0;
+.filter-set.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    margin-bottom: 34px;
+  }
 }
 
-.filter-set.list {
-  justify-content: center;
-  text-align: center;
-  display: flex;
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
+.filter-set li:not(:last-child) {
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter-set li {
+    margin-bottom: 15px;
+  }
 }
 
 .work-list {
-  margin: -15px;
-  display: flex;
-  flex-wrap: wrap;
-  font-weight: 500;
-
-  & .element {
-    width: 370px;
-
-    margin: 15px;
-    border: 1px solid #eeeeee;
-    box-sizing: border-box;
-
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  & .element:hover,
-  & .element:focus-within {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
   }
 }
-.work-list .elem {
-  padding: 20px;
+
+.element {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px * 2) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 30px * 3) / 3);
+  }
+
+  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.elem {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 
 /*.work-list > .item:nth-child(3n) {
@@ -118,5 +142,5 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03e;
 }
