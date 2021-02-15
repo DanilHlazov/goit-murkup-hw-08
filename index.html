@@ -12,9 +12,10 @@
 <body>
     <header class="header">
         <div class="container flexbox">
-            <a style="color: #000000" class="logo no-margin-bottom link" href="./index.html"><span class="accent">Web</span>Studio
+            <a style="color: #000000" class="logo no-margin-bottom link" href="./index.html"><span
+                    class="accent">Web</span>Studio
             </a>
-            <div id="mobile-menu-block" class="mobile-menu-block flexbox" data-menu>
+            <div class="menu-block-none flexbox">
                 <nav class="main-nav">
                     <ul class="site-nav list">
                         <li class="item">
@@ -26,7 +27,7 @@
                         <li class="item"><a href="" class="link">Контакты</a></li>
                     </ul>
                 </nav>
-
+    
                 <ul class="contacts-list list">
                     <li class="contacts-item">
                         <a href="mailto:info@devstudio.com" target="_blank" rel="noopener noreferrer" class="link"
@@ -52,6 +53,27 @@
                     <use class="icon-menu-close" href="./images/symbol-defs.svg#icon-menu-close"></use>
                 </svg>
             </button>
+        </div>
+        <div id="mobile-menu-block" class="mobile-menu-section" data-menu>
+            <nav class="mobile-menu-nav">
+                <ul class="mobile-navigation-buttons">
+                    <li class="mobile-studio-link"><a href="./index.html" class="link current">Студия</a></li>
+                    <li class="mobile-portofolio-link"><a href="./portfolio.html" class="link">Портфолио</a></li>
+                    <li><a href="" class="link">Контакты</a></li>
+                </ul>
+            </nav>
+            <ul class="mobile-contacts-list">
+                <li class="phone-link-string"><a href="tel:+380961111111" class="link phone-link" aria-label="Позвонить">+38
+                        096 111 11 11</a></li>
+                <li class="email-link-string"><a href="mailto:info@devstudio.com" target="_blank" rel="noopener noreferrer"
+                        class="link email-link" aria-label="Написать e-mail">info@devstudio.com</li>
+            </ul>
+            <ul class="mobile-social-links">
+                <li>Instagram</li> <span class="line">|</span>
+                <li>Twitter</li> <span class="line">|</span>
+                <li>Facebook</li> <span class="line">|</span>
+                <li>LinkedIn</li>
+            </ul>
         </div>
     </header>
     <main>
